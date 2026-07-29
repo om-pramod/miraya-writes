@@ -1,108 +1,94 @@
-import { Mail } from 'lucide-react'
+import { Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export function ServicesSection() {
   const services = [
     {
-      title: "SEO Blog & Article Writing",
-      headline: "Turn search traffic into trust.",
-      description: "Regular blog posts and articles that attract the audience you want — and keep them reading. Every piece is:",
+      title: "AI product documentation systems",
+      headline: "Manuals, guides, TSGs, and release notes that match how your product ships.",
+      description: "I build documentation as infrastructure: information architecture, reusable templates, and release-aligned delivery. Typical deliverables:",
       bullets: [
-        "Keyword-researched for topics your audience is actively searching",
-        "Readability and formatting for better engagement",
-        "AI concepts broken down without oversimplification",
-        "Original, fact-checked, and free from AI-generated filler"
+        "User manuals and task-based how-tos",
+        "Quick guides for first success",
+        "Troubleshooting guides with decision trees",
+        "Release notes with breaking changes and upgrade actions",
+        "Repo and wiki patterns (Git, ADO, SharePoint-class workflows)",
       ],
-      idealFor: "AI startups and tech companies wanting consistent organic traffic without publishing generic, low-quality content.",
-      cta: "Start a Blog Project",
-      image: "/images/web-design.svg",
-    },
-    {
-      title: "Website & Landing Page Copy",
-      headline: "Copy that explains, persuades, and converts.",
-      description: "Professional copy for homepages, product pages, service pages, and landing pages. I write content that:",
-      bullets: [
-        "States what your company does in plain, direct language",
-        "Speaks directly to your target buyer's concerns",
-        "Is structured for both readability and SEO",
-        "Enhanced with diagrams, visual breakdowns, and structured examples where needed"
-      ],
-      idealFor: "SaaS and AI companies launching new products, updating their site, or entering a new market.",
-      cta: "Discuss Your Website",
-      image: "/images/ui-ux-design.svg",
-    },
-    {
-      title: "Technical & AI Content Writing",
-      headline: "Accurate content for technical audiences.",
-      description: "Content for AI, machine learning, data science, and technology topics — written with the accuracy that technical readers expect and the clarity that non-technical stakeholders need. Deliverables include:",
-      bullets: [
-        "Technical explainers and deep dives",
-        "AI trend analysis and Problem-to-solution narrative",
-        "A tone that reflects expertise without becoming overly dense",
-        "Developer-focused guides and documentation",
-        "Analytical and concept-driven content"
-      ],
-      idealFor: "Companies whose audiences include engineers, data scientists, or technically-informed buyers.",
-      cta: "Talk About Your Technical Content",
+      idealFor: "AI product teams whose engineers understand the system but support, PMs, and users do not.",
+      cta: "Audit my documentation",
       image: "/images/product-design.svg",
     },
     {
-      title: "Whitepapers & Case Studies",
-      headline: "Long-form content that builds real authority.",
-      description: "In-depth reports and case studies (1,500+ words) that position your company as a credible voice in your space. Each piece is:",
+      title: "Technical explainers and SEO articles",
+      headline: "Search traffic that survives a specialist reader.",
+      description: "Articles and tutorials on ML, LLMs, and data systems, written so a smart non-specialist can finish the piece and an engineer does not wince. Each piece is:",
       bullets: [
-        "Thoroughly researched with cited references",
-        "Structured to guide the reader from problem to solution",
-        "Formatted for professional presentation",
-        "Designed to support lead generation, sales conversations, or thought leadership"
+        "Keyword-researched for real search intent",
+        "Fact-checked against primary sources or SME input",
+        "Free of banned hype vocabulary and filler openers",
+        "Closed with a concrete reader action, not a summary slogan",
       ],
-      idealFor: "Companies that want to establish expertise, support enterprise sales, or contribute to industry conversations.",
-      cta: "Request a Whitepaper",
-      image: "/images/user-research.svg",
-    },
-    {
-      title: "Email Newsletters & Social Media",
-      headline: "Consistent communication between the big pieces.",
-      description: "Short-form content that keeps your audience informed and directs them back to your site. Includes:",
-      bullets: [
-        "Email newsletters (product updates, insights, curated content, announcements)",
-        "LinkedIn posts (thought leadership, technical commentary, product narratives)",
-        "Social captions and content series planning",
-        "Message consistency across platforms and formats"
-      ],
-      idealFor: "Companies building an audience or maintaining visibility between major content releases.",
-      cta: "Plan Your Social Content",
-      image: "/images/motion-graphics.svg",
-    },
-    {
-      title: "Content Editing & Refinement",
-      headline: "Make your existing content work harder.",
-      description: "If you have drafts, internal documents, or published content that isn't quite hitting the mark, I'll improve it. I edit for:",
-      bullets: [
-        "Clarity, tone, and precision",
-        "Structure, flow, and logical progression",
-        "Alignment with your target audience and intent",
-        "Grammar, punctuation, and brand voice consistency"
-      ],
-      idealFor: "Teams with strong ideas but content that needs a professional edit before publishing.",
-      cta: "Submit Content for Review",
+      idealFor: "AI startups and EdTech teams that need organic traffic without thin, generic posts.",
+      cta: "Start a content project",
       image: "/images/web-design.svg",
     },
     {
-      title: "Academic AI & ML Content",
-      headline: "Structured learning content for technical education.",
-      description: "I develop academic materials for AI, Machine Learning, and Data Science — for universities, EdTech platforms, training institutes, and curriculum developers. This includes:",
+      title: "Website and landing page copy",
+      headline: "Say what you build, who it is for, and what to do next.",
+      description: "Service and product pages in Miraya service-copy mode: problem, offer, proof, CTA. I write copy that:",
       bullets: [
-        "Course outlines and syllabus frameworks",
-        "Lesson and module content",
-        "Technical explanations and learning notes",
-        "Assignments and case-based exercises",
-        "Presentation and instructional support materials"
+        "States the product in plain, direct language",
+        "Speaks to founder, PM, and technical buyer concerns",
+        "Pairs claims with process or credential proof",
+        "Uses restrained CTAs (strategy session, docs audit), not vague Submit buttons",
       ],
-      idealFor: "EdTech companies, corporate training teams, and faculty developing AI or data science curricula.",
-      cta: "Discuss Academic Content",
+      idealFor: "SaaS and AI companies launching, repositioning, or cleaning template site copy.",
+      cta: "Discuss your site copy",
       image: "/images/ui-ux-design.svg",
+    },
+    {
+      title: "Audience Adaptation Matrix",
+      headline: "One technical truth, three altitudes.",
+      description: "I rewrite the same product fact for engineers (T), operators and PMs (S), and leadership (N) without changing the numbers. You get:",
+      bullets: [
+        "A shared fact ledger before prose starts",
+        "T/S/N variants that stay consistent under review",
+        "Stakeholder language for gates, risk, and ship decisions",
+        "Fewer support loops caused by contradictory docs",
+      ],
+      idealFor: "Teams shipping AI features to mixed audiences from one content budget.",
+      cta: "Apply the matrix to my product",
+      image: "/images/user-research.svg",
+    },
+    {
+      title: "EdTech and curriculum content",
+      headline: "Learning design for AI and data science, not slide filler.",
+      description: "Course outlines, module notes, and assessments that move learners from definition to application. Deliverables include:",
+      bullets: [
+        "Syllabus and module frameworks",
+        "Technical explanations with worked examples",
+        "Assignments and case-based exercises",
+        "Instructional support materials for faculty or LMS teams",
+      ],
+      idealFor: "EdTech founders, training teams, and institutions building AI or data science programs.",
+      cta: "Discuss academic content",
+      image: "/images/motion-graphics.svg",
+    },
+    {
+      title: "Edit, humanize, and brand-voice pass",
+      headline: "Make existing drafts publishable under a real standard.",
+      description: "I run Google technical writing discipline plus Miraya humanization: active voice, term lock, rhythm variation, and a Responsible AI content checklist. I edit for:",
+      bullets: [
+        "Clarity, structure, and answer-first paragraphs",
+        "Removal of AI-flagged filler and hype terms",
+        "Audience fit and stranger-test readability",
+        "Consistency with your glossary and product truth",
+      ],
+      idealFor: "Teams with strong SME drafts that still read generated, vague, or off-brand.",
+      cta: "Submit content for review",
+      image: "/images/web-design.svg",
     },
   ]
 
@@ -112,10 +98,12 @@ export function ServicesSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-4xl md:text-[52px] md:leading-[60px] font-bold mb-4">
-              My broad <span className="bg-[#FF4A60] text-white px-3 py-1 inline-block">set of services</span>
+              Services for{" "}
+              <span className="bg-[#FF4A60] text-white px-3 py-1 inline-block">AI and EdTech teams</span>
             </h2>
             <p className="text-[#393939] text-base md:text-lg font-medium leading-relaxed md:leading-[30px] max-w-2xl mx-auto">
-              Content for every stage of your communication.
+              Content systems and technical writing that close the gap between engineering and everyone else who needs
+              to ship, sell, support, or learn the product.
             </p>
           </div>
 
@@ -150,9 +138,11 @@ export function ServicesSection() {
                     <span className="font-semibold not-italic">Ideal for:</span> {service.idealFor}
                   </p>
                   <div className="mt-auto">
-                    <Button className="bg-black text-white hover:bg-black/90 rounded-[12px] px-6 py-3 font-medium text-[14px] w-full">
-                      {service.cta}
-                    </Button>
+                    <Link href="/contact">
+                      <Button className="bg-black text-white hover:bg-black/90 rounded-[12px] px-6 py-3 font-medium text-[14px] w-full">
+                        {service.cta}
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -168,14 +158,17 @@ export function ServicesSection() {
                   className="w-[92px] h-[92px]"
                 />
               </div>
-              <h3 className="text-[28px] leading-[40px] font-bold mb-4 text-[#0B0B0B]">Get in touch</h3>
+              <h3 className="text-[28px] leading-[40px] font-bold mb-4 text-[#0B0B0B]">Not sure where to start?</h3>
               <p className="text-[18px] leading-[30px] font-medium text-[#393939] mb-8">
-                Looking for another service? Get in touch with me, there is a high chance that I will be able to help!
+                Bring your stack, content gaps, and one painful support or onboarding loop. We will map a documentation
+                or content plan you can run in a sprint.
               </p>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-[16px] px-12 py-6 font-medium text-[18px] w-full max-w-[340px] h-[64px]">
-                <Mail className="w-5 h-5 mr-2" />
-                Get in touch
-              </Button>
+              <Link href="/contact" className="w-full max-w-[340px]">
+                <Button className="bg-black text-white hover:bg-black/90 rounded-[16px] px-12 py-6 font-medium text-[18px] w-full h-[64px]">
+                  <Mail className="w-5 h-5 mr-2" />
+                  Request a strategy session
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
