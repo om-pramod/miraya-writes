@@ -19,9 +19,9 @@ const onest = Onest({
 })
 
 export const metadata: Metadata = {
-  title: "Paperfolio - Portfolio Landing Page",
-  description: "A playful portfolio landing page",
-  generator: "v0.app",
+  title: "Miraya Intelligenza | AI Technical Writer Hub",
+  description:
+    "Connecting deep tech to human understanding. Documentation systems, technical content, and Responsible AI writing for AI startups and EdTech founders.",
 }
 
 export default function RootLayout({

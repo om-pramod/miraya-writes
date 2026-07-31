@@ -20,7 +20,7 @@ const problems: Problem[] = [
     id: 1,
     title: 'Developer Onboarding Friction',
     accentColor: '#FF4A60',
-    label: 'PROBLEM 01 — DEVELOPER EXPERIENCE',
+    label: 'PROBLEM 01 · DEVELOPER EXPERIENCE',
     subtitle: 'Time lost due to unclear documentation',
     body: [
       'Developers often spend significant time understanding internal systems, terminology, and architecture before they can contribute effectively. This is not always due to complexity alone, but often unclear architecture notes, missing glossaries, and poorly structured guides create a slow ramp-up.',
@@ -42,7 +42,7 @@ const problems: Problem[] = [
     id: 2,
     title: 'Executive and Stakeholder Misalignment',
     accentColor: '#2F81F7',
-    label: 'PROBLEM 02 — ORGANIZATIONAL ALIGNMENT',
+    label: 'PROBLEM 02 · ORGANIZATIONAL ALIGNMENT',
     subtitle: 'Decisions slow down when technical clarity is missing',
     body: [
       'AI systems are often complex, and when they are not explained clearly, different stakeholders interpret them in different ways. This creates gaps between technical teams, leadership, and business stakeholders.',
@@ -64,10 +64,10 @@ const problems: Problem[] = [
     id: 3,
     title: 'Documentation and Compliance Gaps',
     accentColor: '#6366F1',
-    label: 'PROBLEM 03 — GOVERNANCE & COMPLIANCE',
-    subtitle: 'Poor documentation is a governance necessity',
+    label: 'PROBLEM 03 · GOVERNANCE & COMPLIANCE',
+    subtitle: 'Poor documentation is a governance risk',
     body: [
-      'In AI and Machine Learning systems, documentation is not optional — it is a governance necessity. Documentation directly impacts trust, accountability, and risk management. Unlike traditional software, AI systems require a higher level of transparency and compliance.',
+      'In AI and machine learning systems, documentation is not optional. It is a governance necessity. Documentation directly impacts trust, accountability, and risk management. Unlike traditional software, AI systems need a higher level of transparency and compliance.',
       '\n\n',
       'The ',
       <a
@@ -237,15 +237,16 @@ export function ClarityGapSection() {
           <div className="bg-[#FFC224] border-[3px] border-black rounded-[32px] p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="max-w-2xl">
               <p className="text-black font-medium text-[18px] leading-[30px]">
-                Whether the audience is a new developer, a CEO, or an auditor — content that communicates clearly reduces risk, accelerates decisions, and builds the kind of trust that holds organizations together.
+                Whether the audience is a new developer, a CEO, or an auditor, content that communicates clearly reduces
+                risk, speeds decisions, and builds trust that holds organizations together.
               </p>
               <p className="text-black font-bold text-[17px] mt-2">
-                That&apos;s what I do.
+                That is the work Miraya does.
               </p>
             </div>
-            <Link href="#contact">
+            <Link href="/contact">
               <button className="bg-[#0B0B0B] text-white hover:bg-black/90 transition-colors rounded-lg py-5 px-8 font-semibold text-[16px] whitespace-nowrap flex-shrink-0">
-                Schedule a Free Audit →
+                Audit my documentation
               </button>
             </Link>
           </div>

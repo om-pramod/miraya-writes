@@ -1,58 +1,60 @@
 "use client"
 
-import Image from "next/image"
+import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export function TestimonialsSection() {
+  const proofs = [
+    {
+      title: "Documentation system, not a one-pager",
+      body: "EchoBench work sample: manual, quick guide, TSGs, release notes, UI microcopy, and sprint process under one product world.",
+      tag: "Proof",
+    },
+    {
+      title: "Three altitudes, one ledger",
+      body: "Audience Adaptation Matrix keeps engineer, PM, and leadership pages factually aligned. Contradiction is treated as a defect.",
+      tag: "Method",
+    },
+    {
+      title: "Honest about AI quality risk",
+      body: "Gate and flake runbooks tell teams to classify failures before re-running. No pretend guarantee of perfect model behavior.",
+      tag: "Responsible AI",
+    },
+  ]
+
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 pt-4 md:pt-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-[1.3]">
-            What my clients say
+            Proof before
             <br />
-            about <span className="bg-[#2F81F7] text-white px-3 py-1 inline-block">my work</span>
+            <span className="bg-[#2F81F7] text-white px-3 py-1 inline-block">fake quotes</span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto pb-8">
-            Lacus, adipiscing lectus convallis purus aliquet cursus magnaol montes augue donec cras turpis ultrices
-            nulla sed doler.
+            Template portfolios invent VP titles. Miraya shows inspectable artifacts instead. When real client
+            permission exists, named testimonials can replace this block.
           </p>
         </div>
 
-        <div className="relative max-w-5xl mx-auto">
-          <div className="relative">
-            <div className="bg-white border-4 border-black rounded-3xl py-8 md:py-14 px-6 md:px-8 md:pr-72 lg:pr-72">
-              <div className="absolute -top-6 md:-top-8 left-6 md:left-8 w-12 h-12 md:w-16 md:h-16">
-                <Image
-                  src="/images/633b1c81e34cfb82b85454eb-quote-s.png"
-                  alt="Quote"
-                  width={64}
-                  height={64}
-                  className="w-full h-full"
-                />
-              </div>
-
-              <div className="md:max-w-[65%]">
-                <p className="text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore magna aliqua. Ut enim ad minim et minim quis nostrud exercitation ullamco laboris.
-                </p>
-
-                <div>
-                  <div className="font-bold text-base md:text-lg">Lily Woods</div>
-                  <div className="text-gray-600 text-sm md:text-base">VP of Design at Google</div>
-                </div>
-              </div>
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-10">
+          {proofs.map((item) => (
+            <div
+              key={item.title}
+              className="bg-white border-4 border-black rounded-3xl p-6 md:p-8 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-4px] transition-all"
+            >
+              <Badge className="mb-4 w-fit">{item.tag}</Badge>
+              <h3 className="text-xl font-bold mb-3 text-[#0B0B0B]">{item.title}</h3>
+              <p className="text-[#393939] text-base leading-relaxed font-medium">{item.body}</p>
             </div>
+          ))}
+        </div>
 
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden lg:block">
-              <Image
-                src="/images/633b277fc2e3697bb14c6a4f-frances.png"
-                alt="Client testimonial"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
+        <div className="flex justify-center">
+          <Link href="/work">
+            <Button size="lg">Browse work samples</Button>
+          </Link>
         </div>
       </div>
     </section>

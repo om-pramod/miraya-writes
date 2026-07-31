@@ -1,35 +1,36 @@
 import { FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export function ExperienceSection() {
   const experiences = [
     {
-      period: "Jan 2023 - Present",
-      title: "Mobile Product Designer",
+      period: "Core practice",
+      title: "AI product documentation systems",
       description:
-        "Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.",
+        "Task manuals, quick guides, troubleshooting runbooks, release notes, and repo or wiki patterns that ship with the product, not after the launch week ends.",
       icon: "/images/agency.png",
     },
     {
-      period: "Jan 2021 - Dec 2022",
-      title: "VP of Design",
+      period: "Core practice",
+      title: "Technical content for AI and EdTech",
       description:
-        "Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.",
+        "Explainers, tutorials, and SEO articles that survive specialist readers. Terms defined on first use. Claims grounded in sources or SME review.",
       icon: "/images/company.png",
     },
     {
-      period: "Mar 2020 - Dec 2020",
-      title: "Head of Product Design",
+      period: "Method",
+      title: "Audience Adaptation Matrix",
       description:
-        "Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.",
+        "One technical truth rewritten for engineers, operators, and leadership without changing the numbers. Shared fact ledgers before multi-audience prose.",
       icon: "/images/busines.png",
     },
     {
-      period: "Sep 2017 - Feb 2020",
-      title: "Web Designer",
+      period: "Standards",
+      title: "Responsible AI content process",
       description:
-        "Vel facilisis volutpat est velit egestas dui. Urna nec cidu praesent semper feugiat. Vulputate ut pharetra sit.",
+        "Disclosure, accuracy, privacy, and human final review on a checklist. AI may assist research or outlining. A human owns the published line.",
       icon: "/images/startup.png",
     },
   ]
@@ -40,16 +41,20 @@ export function ExperienceSection() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div className="text-white pt-0 md:pt-12 md:sticky md:top-12 self-start">
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 md:mb-8 leading-[1.3]">
-              Take a look at my <span className="bg-[#6366F1] text-white px-3 py-1 inline-block">past experience</span>
+              What I actually{" "}
+              <span className="bg-[#6366F1] text-white px-3 py-1 inline-block">practice</span>
             </h2>
             <p className="text-gray-400 mb-8 md:mb-10 leading-relaxed text-base md:text-lg">
-              Eu pellentesque arcu ornare velit faucibus egestas gravida sed in purus enim molestie gravida imperdiet
-              integer.
+              This is not a fake corporate timeline. It is the work Miraya Intelligenza runs for AI and EdTech teams:
+              documentation systems, technical content, multi-audience rewrites, and a Responsible AI checklist on
+              deliverables.
             </p>
-            <Button className="bg-white text-black hover:bg-gray-50 rounded-lg py-5 px-8 md:py-[22px] md:px-[62px] text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-[240px]">
-              <FileText className="w-5 h-5" />
-              See full resume
-            </Button>
+            <Link href="/work">
+              <Button className="bg-white text-black hover:bg-gray-50 rounded-lg py-5 px-8 md:py-[22px] md:px-[62px] text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-[240px]">
+                <FileText className="w-5 h-5" />
+                See work samples
+              </Button>
+            </Link>
           </div>
 
           <div className="space-y-6">
