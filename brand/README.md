@@ -11,6 +11,8 @@ Canonical operating files for Miraya Intelligenza (AI Technical Writer Hub).
 | [../brand_identity_profile.md](../brand_identity_profile.md) | Values, aesthetic, frameworks list |
 | [../Brand_voice_prompt_library.md](../Brand_voice_prompt_library.md) | Task prompts (one mode at a time) |
 | [../Writer's Voice Profile.md](../Writer's%20Voice%20Profile.md) | Archive only — do not paste whole into routine sessions |
+| [PUBLIC_PROFILE.md](./PUBLIC_PROFILE.md) | Sourced facts + verified URLs from public profiles |
+| [../lib/social-links.ts](../lib/social-links.ts) | Canonical link list used by site components |
 
 ## Proof repo
 

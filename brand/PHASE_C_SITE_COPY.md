@@ -25,12 +25,22 @@
 | `footer.tsx` | Miraya branding; removed third-party email/credit |
 | `app/layout.tsx` | Miraya metadata |
 
+## Pass 3 (public profile wiring)
+
+| File | Change |
+|------|--------|
+| `lib/social-links.ts` | Single source of truth for all public URLs |
+| `brand/PUBLIC_PROFILE.md` | Sourced bio, research, publication, link table |
+| Footer / contact / about / hero / work | Real LinkedIn, GitHub, Medium, Substack, Scholar, Pune |
+| Home + About | Social connect section included |
+| Contact form | Continues to LinkedIn until commercial email exists |
+
 ## Still open
 
-- Wire form backend / real Miraya contact email and LinkedIn URL  
-- Optional: home page include Services/Work teaser sections  
-- Push remaining brand source markdown into git if desired  
-- Add real testimonials only with client permission
+- Commercial Miraya inbox + form backend (Formspree etc.) when you publish one  
+- Optional home Services teaser  
+- Real testimonials only with client permission  
+- Push remaining untracked brand markdown sources if desired
 
 ## Reader action
 

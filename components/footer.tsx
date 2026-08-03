@@ -1,8 +1,9 @@
-import { Linkedin, Mail } from "lucide-react"
+import { Linkedin, Github, BookOpen, Newspaper, GraduationCap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import Link from "next/link"
+import { primaryLinks } from "@/lib/social-links"
 
 export function Footer() {
   return (
@@ -23,20 +24,22 @@ export function Footer() {
 
               <div className="w-full flex-1 bg-white border-4 border-black rounded-3xl py-4 px-4 md:py-6 md:px-8 flex flex-col md:flex-row items-center gap-4 md:gap-6">
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-xl md:text-2xl font-bold text-black">Get practical AI writing notes</h3>
-                  <p className="text-sm text-gray-600 mt-1">Lead magnet UI only. Connect your email tool when ready.</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-black">Read Mostly Human!</h3>
+                  <p className="text-sm text-gray-600 mt-1">
+                    Substack notes on AI, technical writing, and making complex systems usable.
+                  </p>
                 </div>
 
-                <div className="relative w-full md:w-auto md:min-w-[400px] lg:min-w-[480px]">
-                  <Input
-                    type="email"
-                    placeholder="Work email"
-                    className="border-4 border-black rounded-xl px-4 md:px-6 h-14 md:h-16 pr-32 md:pr-44 text-base md:text-lg placeholder:text-gray-500"
-                  />
-                  <Button className="absolute right-2 top-2 bottom-2 bg-black text-white hover:bg-black/90 rounded-[10px] px-6 md:px-10 text-sm md:text-base font-semibold whitespace-nowrap h-auto">
-                    Notify me
+                <a
+                  href={primaryLinks.substack}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full md:w-auto"
+                >
+                  <Button className="bg-black text-white hover:bg-black/90 rounded-[10px] px-6 md:px-10 text-sm md:text-base font-semibold whitespace-nowrap h-14 w-full md:w-auto">
+                    Open Substack
                   </Button>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -56,18 +59,54 @@ export function Footer() {
                 <span className="text-lg md:text-xl font-bold">Miraya Intelligenza</span>
               </div>
               <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                AI Technical Writer Hub. Connecting deep tech to human understanding for AI startups and EdTech
-                founders.
+                Omkar Hankare · AI engineer and technical writer. Connecting deep tech to human understanding for AI
+                startups and EdTech founders. Based in Pune, India.
               </p>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <a
-                  href="https://www.linkedin.com"
+                  href={primaryLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-[#2F81F7] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
-                  aria-label="LinkedIn (update URL)"
+                  aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href={primaryLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#2F81F7] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href={primaryLinks.medium}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#6366F1] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Medium"
+                >
+                  <BookOpen className="w-5 h-5" />
+                </a>
+                <a
+                  href={primaryLinks.substack}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#6366F1] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Substack"
+                >
+                  <Newspaper className="w-5 h-5" />
+                </a>
+                <a
+                  href={primaryLinks.scholar}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#FF4A60] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  aria-label="Google Scholar"
+                >
+                  <GraduationCap className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -106,26 +145,42 @@ export function Footer() {
             <div>
               <h3 className="font-bold mb-4">Start here</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
+                <li>
                   <Link href="/contact" className="hover:text-white transition-colors">
                     Request a strategy session
                   </Link>
+                </li>
+                <li>
+                  <a
+                    href={primaryLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    LinkedIn · ompramod
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={primaryLinks.medium}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-white transition-colors"
+                  >
+                    Medium writing
+                  </a>
                 </li>
                 <li>
                   <Link href="/work" className="hover:text-white transition-colors">
                     Documentation work samples
                   </Link>
                 </li>
-                <li>
-                  <span className="text-gray-500">Add your public email when ready (none hardcoded).</span>
-                </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>Miraya Intelligenza · AI Technical Writer Hub</p>
+            <p>Miraya Intelligenza · AI Technical Writer Hub · Omkar Hankare</p>
           </div>
         </div>
       </div>

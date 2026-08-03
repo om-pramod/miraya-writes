@@ -28,9 +28,9 @@ export function HeroSection() {
           </h1>
 
           <p className="text-[#393939] text-[16px] md:text-[18px] font-medium leading-[28px] md:leading-[30px] max-w-xl">
-            I am Omkar Hankare, founder of Miraya Intelligenza (AI Technical Writer Hub). I help Series A AI startups
-            and EdTech founders turn dense ML systems into documentation, tutorials, and content systems that engineers
-            trust and non-specialists can use.
+            I am Omkar Hankare, founder of Miraya Intelligenza (AI Technical Writer Hub), based in Pune. Some people
+            build models. Some explain them. I do both. I help AI startups and EdTech founders turn dense systems into
+            documentation, tutorials, and content systems engineers trust and non-specialists can use.
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-7 pt-4">

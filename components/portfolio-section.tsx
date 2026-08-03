@@ -15,6 +15,8 @@ export function PortfolioSection() {
       bgColor: "bg-brand-purple",
       illustration: "/images/studio-workspace.svg",
       href: "/contact",
+      cta: "Request a sample walkthrough",
+      external: false,
     },
     {
       title: "Support runbooks for AI quality gates",
@@ -25,6 +27,8 @@ export function PortfolioSection() {
       bgColor: "bg-brand-blue",
       illustration: "/images/venture-workspace.svg",
       href: "/contact",
+      cta: "Request a sample walkthrough",
+      external: false,
     },
     {
       title: "Miraya brand and editorial OS",
@@ -35,6 +39,20 @@ export function PortfolioSection() {
       bgColor: "bg-[#FFC224]",
       illustration: "/images/product-design.svg",
       href: "/contact",
+      cta: "Request a sample walkthrough",
+      external: false,
+    },
+    {
+      title: "Public AI explainers (Medium)",
+      description:
+        "Multi-part series on autoencoders and gradient descent, plus hands-on guides such as Google Teachable Machine. Written to make ML concepts usable for learners without flattening the technical core.",
+      tag: "Published writing",
+      proof: "ompramod.medium.com · open series",
+      bgColor: "bg-[#FF6B7A]",
+      illustration: "/images/web-design.svg",
+      href: "https://ompramod.medium.com/",
+      cta: "Read on Medium",
+      external: true,
     },
   ]
 
@@ -73,13 +91,25 @@ export function PortfolioSection() {
 
                 <p className="text-sm md:text-base font-semibold text-[#0B0B0B] mb-8">Proof focus: {project.proof}</p>
 
-                <Link
-                  href={project.href}
-                  className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base"
-                >
-                  Request a sample walkthrough
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                {project.external ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base"
+                  >
+                    {project.cta}
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                ) : (
+                  <Link
+                    href={project.href}
+                    className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base"
+                  >
+                    {project.cta}
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
 
               <div className={`${project.bgColor} relative overflow-hidden min-h-[250px] md:min-h-[400px]`}>
