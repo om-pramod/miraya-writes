@@ -8,3 +8,12 @@ node_modules
 .next/
 .env*.local
 .DS_Store
+desktop.ini
+Thumbs.db
+
+# Working/reference directories (not site source)
+Test/
+Unpack/
+Rotating Words/
+The complete Paperfolio Design.txt
+sample1.webp

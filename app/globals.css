@@ -75,8 +75,45 @@
 }
 
 @theme inline {
-  --font-sans: "Onest", "Onest Fallback", system-ui, sans-serif;
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "JetBrains Mono Fallback", monospace;
+  --font-heading: var(--font-onest);
+
+  /* Neobrutalism.dev Library Tokens */
+  --color-main: #FF4A60;
+  --color-main-accent: #2F81F7;
+  --color-bw: #212121;
+  --color-blank: #ffffff;
+  
+  --border-width-base: 3px;
+  --radius-base: 5px;
+  --radius-card: 32px;
+
+  --shadow-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+  --shadow-shadow-sm: 4px 4px 0px 0px rgba(0,0,0,1);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 30s linear infinite;
+
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  --color-brand-coral: #FF4A60;
+  --color-brand-blue: #2F81F7;
+  --color-brand-purple: #6366F1;
+  --color-brand-yellow: #FFC224;
+
+  --shadow-brutal: 8px 8px 0px 0px rgba(0,0,0,1);
+  --shadow-brutal-sm: 4px 4px 0px 0px rgba(0,0,0,1);
+  --shadow-brutal-left: -8px 8px 0px 0px rgba(0,0,0,1);
+
+  /* Advanced Neo-Brutalist Utilities */
+  --shadow-brutal-active: 2px 2px 0px 0px rgba(0,0,0,1);
+  --ring-width-brutal: 4px;
+  --color-ring-brutal: #FFC224;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
