@@ -66,7 +66,7 @@ export function ExperienceSection() {
                   </div>
                   <div className="rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <Image
-                      src={exp.icon || "/placeholder.svg"}
+                      src={exp.icon}
                       alt={exp.title}
                       width={48}
                       height={48}

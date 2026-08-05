@@ -115,7 +115,7 @@ export function ServicesSection() {
               >
                 <div className="mb-4 -mx-[3px] -mt-[3px] overflow-hidden rounded-t-[29px]">
                   <Image
-                    src={service.image || "/placeholder.svg"}
+                    src={service.image}
                     alt={service.title}
                     width={382}
                     height={200}

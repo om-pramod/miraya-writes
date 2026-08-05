@@ -114,7 +114,7 @@ export function PortfolioSection() {
 
               <div className={`${project.bgColor} relative overflow-hidden min-h-[250px] md:min-h-[400px]`}>
                 <Image
-                  src={project.illustration || "/placeholder.svg"}
+                  src={project.illustration}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
